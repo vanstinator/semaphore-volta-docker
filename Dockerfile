@@ -28,4 +28,3 @@ ENV PATH $VOLTA_HOME/bin:$PATH
 
 # install volta
 RUN curl https://get.volta.sh | bash
-RUN volta install node

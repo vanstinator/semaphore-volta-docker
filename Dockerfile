@@ -1,11 +1,20 @@
-FROM registry.semaphoreci.com/ubuntu:18.04
+FROM ubuntu:20.04
+
+RUN apt-get -y update && apt-get install -y 
 
 # curl and ca-certificates are needed for volta installation
 RUN apt-get update \
   && apt-get install -y \
   curl \
   ca-certificates \
+  git \
+  lftp \
+  openssh-client \
+  coreutils \
   --no-install-recommends
+
+# We'll need to run docker commands
+RUN curl -sSL https://get.docker.com/ | sh
 
 # bash will load volta() function via .bashrc 
 # using $VOLTA_HOME/load.sh

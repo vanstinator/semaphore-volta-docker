@@ -1,4 +1,4 @@
-FROM FROM registry.semaphoreci.com/ubuntu:18.04
+FROM registry.semaphoreci.com/ubuntu:18.04
 
 # curl and ca-certificates are needed for volta installation
 RUN apt-get update \

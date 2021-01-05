@@ -1,7 +1,5 @@
 FROM ubuntu:20.04
 
-RUN apt-get -y update && apt-get install -y 
-
 # curl and ca-certificates are needed for volta installation
 RUN apt-get update \
   && apt-get install -y \
